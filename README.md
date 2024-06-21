@@ -107,44 +107,64 @@ también se debe incluir en la respuesta.</h4>
 <h4>18. Lista el nombre y el precio del producto más barato. (Utilice solamente las cláusulas ORDER
 BY y LIMIT )</h4>
 
-
+    SELECT nombre,precio
+    FROM producto
+    ORDER BY precio
+    LIMIT 1;
 
 <h4>19. Lista el nombre y el precio del producto más caro. (Utilice solamente las cláusulas ORDER BY
 y LIMIT )</h4>
 
-
+    SELECT nombre,precio
+    FROM producto
+    ORDER BY precio DESC
+    LIMIT 1; 
 
 <h4>20. Lista el nombre de todos los productos del fabricante cuyo identificador de fabricante es
 igual a 2.</h4>
 
-
+    SELECT nombre,precio,id_fabricante
+    FROM producto
+    WHERE id_fabricante = 2;
 
 <h4>21. Lista el nombre de los productos que tienen un precio menor o igual a 120€.</h4>
 
-
+    SELECT nombre,precio,id_fabricante
+    FROM producto
+    WHERE precio<=120;
 
 <h4>22. Lista el nombre de los productos que tienen un precio mayor o igual a 400€.</h4>
-
-
+ 
+    SELECT nombre,precio,id_fabricante
+    FROM producto
+    WHERE precio>=400;
 
 <h4>23. Lista el nombre de los productos que no tienen un precio mayor o igual a 400€.BETWEEN .</h4>
 
-
+    SELECT nombre,precio,id_fabricante
+    FROM producto
+    WHERE NOT precio<400;
 
 <h4>24. Lista todos los productos que tengan un precio entre 80€ y 300€. Sin utilizar el operador
 BETWEEN .</h4>
 
-
+    SELECT nombre,precio
+    FROM producto
+    WHERE (precio>80) AND (precio<=300);
 
 <h4>25. Lista todos los productos que tengan un precio entre 60€ y 200€. Utilizando el operador
 fabricante sea igual a 6.</h4>
-
-
+    
+    SELECT nombre,precio
+    FROM producto
+    WHERE precio BETWEEN 60 AND 200;
 
 <h4>26. Lista todos los productos que tengan un precio mayor que 200€ y que el identificador de
 operador IN .</h4>
 
-
+    SELECT nombre,precio,id_fabricante
+    FROM producto
+    WHERE precio > 200 AND id_fabricante;
 
 <h4>27. Lista todos los productos donde el identificador de fabricante sea 1, 3 o 5. Sin utilizar el
 operador IN .</h4>
